@@ -1,137 +1,248 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-    font-family: 'Segoe UI', sans-serif;
-    background: linear-gradient(135deg, #d88434, #c56f1e);
-    color: white;
-    overflow-x: hidden;
+  font-family: "Segoe UI", sans-serif;
+  background: linear-gradient(135deg, #d88434, #c56f1e);
+  color: white;
+  overflow-x: hidden;
 }
 
 /* ================= NAVBAR ================= */
 header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 30px 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 100px;
 }
 
 .logo {
-    font-weight: 700;
-    font-size: 22px;
-    letter-spacing: 1px;
+  font-weight: 700;
+  font-size: 22px;
+  letter-spacing: 1px;
 }
 
 nav a {
-    color: white;
-    text-decoration: none;
-    margin-left: 35px;
-    font-size: 16px;
-    font-weight: 500;
-    position: relative;
-    transition: 0.3s;
+  color: white;
+  text-decoration: none;
+  margin-left: 35px;
+  font-size: 16px;
+  font-weight: 500;
+  position: relative;
+  transition: 0.3s;
 }
 
 nav a::after {
-    content: "";
-    position: absolute;
-    width: 0%;
-    height: 2px;
-    background: white;
-    left: 0;
-    bottom: -5px;
-    transition: 0.3s;
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  background: white;
+  left: 0;
+  bottom: -5px;
+  transition: 0.3s;
 }
 
 nav a:hover::after {
-    width: 100%;
+  width: 100%;
 }
 
 /* ================= HERO SECTION ================= */
 .hero {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0 100px;
-    min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 100px;
+  min-height: 100vh;
 }
 
 /* LEFT SIDE */
 .hero-left {
-    max-width: 600px;
-    animation: fadeInLeft 1s ease-in-out;
+  max-width: 600px;
+  animation: fadeInLeft 1s ease-in-out;
 }
 
 .hero-left h1 {
-    font-size: 72px;
-    font-weight: 800;
-    margin-bottom: 30px;
-    line-height: 1.1;
+  font-size: 72px;
+  font-weight: 800;
+  margin-bottom: 30px;
+  line-height: 1.1;
 }
 
 .hero-left p {
-    font-size: 18px;
-    line-height: 1.8;
-    margin-bottom: 40px;
-    opacity: 0.9;
+  font-size: 18px;
+  line-height: 1.8;
+  margin-bottom: 40px;
+  opacity: 0.9;
 }
 
 /* BUTTON */
 .hero-left button {
-    padding: 16px 40px;
-    border: none;
-    background: white;
-    color: #d88434;
-    font-size: 15px;
-    font-weight: 600;
-    border-radius: 50px;
-    cursor: pointer;
-    transition: 0.3s ease;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+  padding: 16px 40px;
+  border: none;
+  background: white;
+  color: #d88434;
+  font-size: 15px;
+  font-weight: 600;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: 0.3s ease;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
 }
 
 .hero-left button:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 15px 35px rgba(0,0,0,0.3);
+  transform: translateY(-5px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
 }
 
 /* RIGHT SIDE (GEDUNG) */
 .hero-right {
-    flex: 1;
-    display: flex;
-    justify-content: flex-end;
-    animation: fadeInRight 1.2s ease-in-out;
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+  animation: fadeInRight 1.2s ease-in-out;
 }
 
 .hero-right img {
-    height: 95vh;   /* bikin besar */
-    width: auto;
-    margin-right: -120px; /* biar agak keluar */
-    filter: drop-shadow(0 30px 40px rgba(0,0,0,0.3));
+  height: 95vh; /* bikin besar */
+  width: auto;
+  margin-right: -120px; /* biar agak keluar */
+  filter: drop-shadow(0 30px 40px rgba(0, 0, 0, 0.3));
+}
+
+/* ================= ABOUT SECTION ================= */
+
+.about {
+  background: #f3f3f3;
+  color: #222;
+  padding: 100px 100px;
+  position: relative;
+}
+
+/* gradient pojok kiri seperti gambar */
+.about::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 40%;
+  height: 100%;
+  background: linear-gradient(135deg, #f2a65a, transparent);
+  z-index: 0;
+}
+
+.about-container {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 70px;
+  flex-wrap: wrap;
+}
+
+/* IMAGE BULAT */
+.about-image img {
+  width: 420px;
+  height: 420px;
+  object-fit: cover;
+  border-radius: 50%;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+}
+
+/* CONTENT */
+.about-content {
+  max-width: 600px;
+}
+
+.about-content h2 {
+  font-size: 42px;
+  font-weight: 800;
+  margin-bottom: 20px;
+  color: #0b3c74;
+}
+
+.about-content h2 span {
+  color: #ff7a00;
+}
+
+.about-content p {
+  line-height: 1.8;
+  color: #444;
+  margin-bottom: 35px;
+}
+
+/* BUTTON AREA */
+.about-action {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+}
+
+.btn-primary {
+  background: #0b3c74;
+  color: white;
+  border: none;
+  padding: 14px 30px;
+  border-radius: 40px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btn-primary:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* garis */
+.line {
+  width: 140px;
+  height: 2px;
+  background: #0b3c74;
+}
+
+/* dots slider */
+.dots {
+  margin-top: 35px;
+}
+
+.dots span {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  background: #0b3c74;
+  border-radius: 50%;
+  margin-right: 10px;
+  opacity: 0.7;
+}
+
+.dots span:hover {
+  opacity: 1;
 }
 
 /* ================= ANIMATION ================= */
 @keyframes fadeInLeft {
-    from {
-        opacity: 0;
-        transform: translateX(-50px);
-    }
-    to {
-        opacity: 1;
-        transform: translateX(0);
-    }
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }
 
 @keyframes fadeInRight {
-    from {
-        opacity: 0;
-        transform: translateX(50px);
-    }
-    to {
-        opacity: 1;
-        transform: translateX(0);
-    }
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }
